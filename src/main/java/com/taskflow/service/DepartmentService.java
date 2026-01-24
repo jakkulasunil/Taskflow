@@ -1,6 +1,7 @@
 package com.taskflow.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.taskflow.model.Department;
 
@@ -13,5 +14,7 @@ public interface DepartmentService {
 	Department updateDepartment(Department department, Long departmentId);
 
 	void deleteDepartmentById(Long departmentId);
+	
+	Optional<Department> fetchDepartmentById(Long departmentId);
 
 }

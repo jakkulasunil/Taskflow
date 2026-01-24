@@ -2,6 +2,7 @@ package com.taskflow.service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -53,6 +54,12 @@ public class DepartmentServiceImpl implements DepartmentService {
 	public void deleteDepartmentById(Long departmentId) {
 		// TODO Auto-generated method stub
 		departmentRepository.deleteById(departmentId);
+	}
+
+	@Override
+	public Optional<Department> fetchDepartmentById(Long departmentId) {
+		// TODO Auto-generated method stub
+		return departmentRepository.findById(departmentId);
 	}
 
 }

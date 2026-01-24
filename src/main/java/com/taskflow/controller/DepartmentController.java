@@ -1,6 +1,7 @@
 package com.taskflow.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,6 +29,12 @@ public class DepartmentController {
 	@GetMapping("/departments")
 	public List<Department> fetchDepartmentList() {
 		return departmentService.fetchDepartmentList();
+	}
+	
+	@GetMapping("/departments/{id}")
+	public Optional<Department> fetchDepartmentById(@PathVariable("id") Long departmentId) {
+		Optional<Department> departmentByid=departmentService.fetchDepartmentById(departmentId);
+		return departmentByid;
 	}
 
 	@PutMapping("/department/{id}")
