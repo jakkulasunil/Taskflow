@@ -7,5 +7,7 @@ import com.taskflow.model.Department;
 
 @Repository
 public interface DepartmentRepository extends CrudRepository<Department, Long>{
+	
+	
 
 }
