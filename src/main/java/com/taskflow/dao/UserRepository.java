@@ -1,5 +1,5 @@
 package com.taskflow.dao;
 
-public class UserRepository {
+public interface UserRepository {
 
 }
