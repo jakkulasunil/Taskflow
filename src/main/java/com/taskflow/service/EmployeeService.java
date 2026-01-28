@@ -10,4 +10,6 @@ public interface EmployeeService {
 	public Employee saveEmployee(Employee employee);
 	
 	public List<Employee> getEmployeeByNames(String departmentName);
+	
+	public List<Employee> getEmployees();
 }
